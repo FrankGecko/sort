@@ -29,30 +29,3 @@ export function insertionSort(arr, isAGreaterThanB) {
         }
     }
 }
-
-/**
- * 
- * @param {[]} arr 
- * @param {(a, b) => boolean} isAGreaterThanB 
- */
-function shellSort(arr, isAGreaterThanB) {
- 
-}
-
-/**
- * 
- * @param {[]} arr 
- * @param {(a, b) => boolean} isAGreaterThanB 
- */
-function TDMergeSort(arr, isAGreaterThanB) {
-
-}
-
-/**
- * 
- * @param {[]} arr 
- * @param {(a, b) => boolean} isAGreaterThanB 
- */
-function BUMergeSort(arr, isAGreaterThanB) {
-
-}
