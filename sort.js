@@ -29,3 +29,15 @@ export function insertionSort(arr, isAGreaterThanB) {
         }
     }
 }
+
+/**
+ * 
+ * @param {[]} arr 
+ * @param {number} i 
+ * @param {number} j 
+ */
+function exchangeValues(arr, i, j) {
+    let iValue = arr[i];
+    arr[i] = arr[j];
+    arr[j] = iValue;
+}
