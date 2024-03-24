@@ -33,6 +33,27 @@ export function insertionSort(arr, isAGreaterThanB) {
 /**
  * 
  * @param {[]} arr 
+ * @param {(a, b) => boolean} isAGreaterThanB 
+ */
+export function shellSort(arr, isAGreaterThanB) {
+    let h = 1;
+    let hFactor = 3;
+    while (h < arr.length / hFactor) h = h * hFactor + 1;
+
+    while (h >= 1) {
+        for (let i = h; i < arr.length; i += h) {
+            for (let j = i; j > 0; j -= h) {
+                let jPreviousIndex = j - h;
+                if (isAGreaterThanB(arr[j], arr[jPreviousIndex])) exchangeValues(arr, j, jPreviousIndex);
+            }
+        }
+        h = h / hFactor;
+    }
+}
+
+/**
+ * 
+ * @param {[]} arr 
  * @param {number} i 
  * @param {number} j 
  */
