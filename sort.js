@@ -44,7 +44,7 @@ export function shellSort(arr, isAGreaterThanB) {
         for (let i = h; i < arr.length; i += h) {
             for (let j = i; j > 0; j -= h) {
                 let jPreviousIndex = j - h;
-                if (isAGreaterThanB(arr[j], arr[jPreviousIndex])) exchangeValues(arr, j, jPreviousIndex);
+                if (isAGreaterThanB(arr[jPreviousIndex], arr[j])) exchangeValues(arr, j, jPreviousIndex);
             }
         }
         h = h / hFactor;
