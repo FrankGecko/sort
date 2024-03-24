@@ -6,10 +6,10 @@
  */
 export function selectionSort(arr, isAGreaterThanB) {
     
-    for (let i = 0; arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         let minIndex = i;
 
-        for (j = i; j < arr.length; j++) {
+        for (let j = i; j < arr.length; j++) {
             if (isAGreaterThanB(arr[minIndex], arr[j])) minIndex = j;
         }
 
