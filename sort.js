@@ -24,8 +24,8 @@ export function selectionSort(arr, isAGreaterThanB) {
  */
 export function insertionSort(arr, isAGreaterThanB) {
     for (let i = 1; i < arr.length; i++) {
-        for (let j = i; j > 0 && isAGreaterThanB(arr[j], arr[j - 1]); j--) {
-            exchangeValues(arr, j, j-1);
+        for (let j = i; j > 0 && isAGreaterThanB(arr[j - 1], arr[j]); j--) {
+            exchangeValues(arr, j, j - 1);
         }
     }
 }
