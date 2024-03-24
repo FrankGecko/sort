@@ -1,21 +1,10 @@
 
-/**
- * 
- * @param {[]} arr 
- * @param {number} i 
- * @param {number} j 
- */
-function exchangeValues(arr, i, j) {
-    let iValue = arr[i];
-    arr[i] = arr[j];
-    arr[j] = iValue;
-}
 
 /**
  * @param {[]} arr
  * @param {(a, b) => boolean} isAGreaterThanB
  */
-function selectionSort(arr, isAGreaterThanB) {
+export function selectionSort(arr, isAGreaterThanB) {
     
     for (let i = 0; arr.length; i++) {
         let minIndex = i;
@@ -24,7 +13,7 @@ function selectionSort(arr, isAGreaterThanB) {
             if (isAGreaterThanB(arr[minIndex], arr[j])) minIndex = j;
         }
 
-        if (minIndex !== i) exchangeValues(arr, i, minIndex);        
+        if (minIndex !== i) exchangeValues(arr, i, minIndex);
     }
 }
 
@@ -33,7 +22,7 @@ function selectionSort(arr, isAGreaterThanB) {
  * @param {[]} arr 
  * @param {(a, b) => boolean} isAGreaterThanB 
  */
-function insertionSort(arr, isAGreaterThanB) {
+export function insertionSort(arr, isAGreaterThanB) {
     for (let i = 1; i < arr.length; i++) {
         for (let j = i; j > 0 && isAGreaterThanB(arr[j], arr[j - 1]); j--) {
             exchangeValues(arr, j, j-1);
