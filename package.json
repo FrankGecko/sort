@@ -4,7 +4,7 @@
   "description": "JavaScript module containing fundamental sorting algorithms that sort arrays in-place.",
   "main": "sort.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/FrankGecko/sort/issues"
   },
-  "homepage": "https://github.com/FrankGecko/sort#readme"
+  "homepage": "https://github.com/FrankGecko/sort#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
