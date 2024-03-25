@@ -38,16 +38,16 @@ function insertionSort(arr, isAGreaterThanB) {
 function shellSort(arr, isAGreaterThanB) {
     let h = 1;
     let hFactor = 3;
+
     while (h < arr.length / hFactor) h = h * hFactor + 1;
 
     while (h >= 1) {
-        for (let i = h; i < arr.length; i += h) {
-            for (let j = i; j > 0; j -= h) {
-                let jPreviousIndex = j - h;
-                if (isAGreaterThanB(arr[jPreviousIndex], arr[j])) exchangeValues(arr, j, jPreviousIndex);
+        for (let i = h; i < arr.length; i++) {
+            for (let j = i; j >= h && isAGreaterThanB(arr[j - h], arr[j]); j -= h) {
+                exchangeValues(arr, j, j - h);
             }
         }
-        h = h / hFactor;
+        h = Math.floor(h / hFactor);
     }
 }
 
