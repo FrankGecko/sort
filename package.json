@@ -1,6 +1,6 @@
 {
   "name": "@frankgecko/sort",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "JavaScript module containing fundamental sorting algorithms that sort arrays in-place.",
   "main": "sort.cjs",
   "scripts": {
