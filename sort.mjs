@@ -4,7 +4,7 @@
  * @param {[]} arr
  * @param {(a, b) => boolean} isAGreaterThanB
  */
-function selectionSort(arr, isAGreaterThanB) {
+export function selectionSort(arr, isAGreaterThanB) {
     
     for (let i = 0; i < arr.length; i++) {
         let minIndex = i;
@@ -22,7 +22,7 @@ function selectionSort(arr, isAGreaterThanB) {
  * @param {[]} arr 
  * @param {(a, b) => boolean} isAGreaterThanB 
  */
-function insertionSort(arr, isAGreaterThanB) {
+export function insertionSort(arr, isAGreaterThanB) {
     for (let i = 1; i < arr.length; i++) {
         for (let j = i; j > 0 && isAGreaterThanB(arr[j - 1], arr[j]); j--) {
             exchangeValues(arr, j, j - 1);
@@ -35,7 +35,7 @@ function insertionSort(arr, isAGreaterThanB) {
  * @param {[]} arr 
  * @param {(a, b) => boolean} isAGreaterThanB 
  */
-function shellSort(arr, isAGreaterThanB) {
+export function shellSort(arr, isAGreaterThanB) {
     let h = 1;
     let hFactor = 3;
     while (h < arr.length / hFactor) h = h * hFactor + 1;
@@ -62,5 +62,3 @@ function exchangeValues(arr, i, j) {
     arr[i] = arr[j];
     arr[j] = iValue;
 }
-
-module.exports = {selectionSort, insertionSort, shellSort};
