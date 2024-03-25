@@ -1,4 +1,4 @@
-const {selectionSort} = require("../sort");
+const {selectionSort} = require("./../sort.cjs");
 
 let numberAisGreaterThanB = (a, b) => a > b;
 
